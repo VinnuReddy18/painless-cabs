@@ -113,7 +113,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               number: {
                 density: {
                   enable: true,
-                  value_area: 800,
+                  area: 800,  // Changed from value_area to area
                 },
                 value: particleDensity || 80,
               },
