@@ -78,10 +78,13 @@ export const SparklesCore = (props: ParticlesProps) => {
                   mode: "push",
                 },
                 onHover: {
-                  enable: false,
+                  enable: true,
                   mode: "repulse",
                 },
-                resize: true as boolean,
+                resize: {
+                  enable: true,
+                  delay: 0.5
+                },
               },
               modes: {
                 push: {
