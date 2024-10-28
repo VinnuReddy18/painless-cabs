@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export function IntroAnimation({ onAnimationComplete }: { onAnimationComplete: () => void }) {
   const [showIntro, setShowIntro] = useState(true);
@@ -34,10 +35,12 @@ export function IntroAnimation({ onAnimationComplete }: { onAnimationComplete: (
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <img
+              <Image
                 src="/project-dark-horse-logo.png"
                 alt="Project Dark Horse Logo"
-                className="w-48 h-48 object-contain"
+                width={192}
+                height={192}
+                className="object-contain"
               />
             </motion.div>
             <motion.h2
